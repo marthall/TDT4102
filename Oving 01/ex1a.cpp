@@ -7,4 +7,5 @@ int main() {
     cin >> i;
     cout << "Du skrev: " << i << endl;
     return 0;
+
 }
