@@ -62,13 +62,13 @@ int checkCharacters(char code[], char guess[]){
     int tempCodeCount;
     int tempGuessCount;
     int correct = 0;
-    for(int letter = 65; letter < 65 + LETTERS; letter++){
+    for(char letter = 65; letter < 65 + LETTERS; letter++){
         tempCodeCount = 0;
         tempGuessCount = 0;
         for(int j = 0; j < SIZE; j++){
-            if(code[j] == (char)letter)
+            if(code[j] == letter)
                 tempCodeCount++;
-            if(guess[j] == (char)letter)
+            if(guess[j] == letter)
                 tempGuessCount++;
         }
         correct += min(tempCodeCount, tempGuessCount);
