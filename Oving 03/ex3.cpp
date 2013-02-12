@@ -60,8 +60,8 @@ int checkCharactersAndPosition(char code[], char guess[]){
 }
 
 int checkCharacters(char code[], char guess[]){
-    char tempCodeCount;
-    char tempGuessCount;
+    int tempCodeCount;
+    int tempGuessCount;
     int correct = 0;
     for(int letter = 65; letter < 65 + LETTERS; letter++){
         tempCodeCount = 0;
