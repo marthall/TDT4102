@@ -34,16 +34,15 @@ int main() {
 }
 
 char randomChar(){
-    const int MIN = 65;
-    const int MAX = MIN + LETTERS;
-    char randChar = rand() % (MAX - MIN) + MIN;
-    return randChar;
+    const char MIN = 'A';
+    const char MAX = MIN + LETTERS;
+    return rand() % LETTERS + MIN;
 }
 
 void readInput(char guess[]){
     char letter;
-    cout << "Skriv inn fire store bokstaver fra " << (char)65 << " til "
-       << (char)(65 + LETTERS - 1) << ": ";
+    cout << "Skriv inn fire bokstaver fra " << 'A' << " til "
+       << (char)('A' + LETTERS - 1) << ": ";
     for(int i = 0; i < SIZE; i++){
         cin >> letter;
         guess[i] = toupper(letter);
