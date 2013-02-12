@@ -25,8 +25,8 @@ int main() {
 
     do{
         readInput(guess);
-        cout << "Antall på riktig plass: " << checkCharactersAndPosition(code, guess) << endl;
-        cout << "Antall riktige bokstaver: " << checkCharacters(code, guess) << endl;
+        cout << "Antall riktige bokstaver på riktig plass: " << checkCharactersAndPosition(code, guess) << endl;
+        cout << "Antall riktige bokstaver på feil plass: " << checkCharacters(code, guess) << endl;
     }while(checkCharactersAndPosition(code, guess) < SIZE);
 
     cout << "Gratulerer!!!" << endl;
@@ -73,5 +73,5 @@ int checkCharacters(char code[], char guess[]){
         }
         correct += min(tempCodeCount, tempGuessCount);
     }
-    return correct;
+    return correct - checkCharactersAndPosition(code, guess);
 }
