@@ -1,3 +1,6 @@
+#ifndef CARD_H
+#define CARD_H
+
 #include <string>
 
 using std::string;
@@ -6,7 +9,7 @@ class Card{
 
     private:
         int value;
-        string suit; 
+        string suit;  
 
     public:
         int getValue();
@@ -17,3 +20,5 @@ class Card{
 
         string getFace();
 };
+
+#endif

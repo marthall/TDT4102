@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
-#include <cstdlib>
 #include <sstream>
+#include <cstdlib>
+#include "Card.h"
 
 using namespace std;
 
@@ -33,7 +34,7 @@ void Card::setValue(int value){
 
 void Card::setSuit(string suit){
     string str = "SHCD";
-    if (str.find(suit) != -1){
+    if (str.find(suit) != string::npos){
         this->suit = suit;
     } else {
         cout << "Illegal suit" << endl;

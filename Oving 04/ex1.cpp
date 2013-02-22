@@ -16,11 +16,17 @@ int main(){
 bool isAlive(Beatle beatle){
     switch(beatle){
         case PAUL:
+            return true;
+            break;
         case RINGO:
             return true;
+            break;
         case GEORGE:
+            return false;
+            break;
         case JOHN:
             return false;
+            break;
     }
         
 }
